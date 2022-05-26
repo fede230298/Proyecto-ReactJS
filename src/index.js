@@ -1,4 +1,25 @@
+//Load React Library
 import React from 'react';
+//import <name> from 'route'
+// Load ReactDOM Library
+import ReactDOM from 'react-dom/client';
+//Load an existing React APP
+import App from "./App"
+
+import Header from "./components/NavBar"
+
+import "./components/Styles.css"
+/* import App from './App'; */
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Header />
+  </React.StrictMode>
+);
+
+
+
+/* import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -15,3 +36,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+ */
