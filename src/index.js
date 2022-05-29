@@ -8,7 +8,8 @@ import App from "./App"
 
 import Header from "./components/NavBar"
 
-import "./components/Styles.css"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+/* import "./components/Styles.css" */
 /* import App from './App'; */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
