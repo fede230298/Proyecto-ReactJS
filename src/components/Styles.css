@@ -1,30 +1,4 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: gainsboro;
-}
-
-.navBar{
-    width: 100%;
-    background-color: black;
-    margin:0px;
-    padding: 0.1px;
-    overflow: hidden;
-}
-
-.navBar-items{
-    display: inline-block;
-    padding: 10px;
-    margin: 10px;
-    color: white;
-    background-color: midnightblue;
-    font-size: 1.50rem;
-    text-align: justify ;
-    justify-content: space-evenly;
-}
-
-.brand{
-    font-size: 2rem;
-    color: orange;
-    text-align: center;
+.product-image{
+    width: 20rem;
+    height: 20rem;
 }
