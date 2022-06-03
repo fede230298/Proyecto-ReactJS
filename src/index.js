@@ -4,10 +4,9 @@ import React from 'react';
 // Load ReactDOM Library
 import ReactDOM from 'react-dom/client';
 //Load an existing React APP
-import App from "./App"
+import App from "./components/App"
 
-import Header from "./components/NavBar"
-import ItemListContainer from "./components/ItemListContainer"
+
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
@@ -16,8 +15,7 @@ import "./components/Styles.css"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
-    <ItemListContainer />
+    <App />
   </React.StrictMode>
 );
 
