@@ -28,8 +28,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     if (stock == 0){
         return(
-            <div>
-                <p>Sin stock</p>
+            <div className="d-inline-block">
+                
+                <p><button>-</button> Sin Stock <button>+</button></p>
+                
             </div>
         )
     }
