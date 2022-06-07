@@ -3,6 +3,10 @@ import { useState } from "react";
 const ItemCount = ({stock, initial, onAdd}) => {
     const [contador, setContador] = useState(initial)
 
+    onAdd = () =>{
+        console.log(contador);
+    }
+
     if (stock > 0){
         const aumentarContador = () => {
             console.log("aumentar contador")
@@ -21,6 +25,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <div className="d-inline-block">
                 
                 <p><button onClick={disminuirContador}>-</button> Carrito: {contador} <button onClick={aumentarContador}>+</button></p>
+                <button onClick={onAdd}>Confirmar</button>
                 
             </div>
         )
@@ -31,6 +36,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <div className="d-inline-block">
                 
                 <p><button>-</button> Sin Stock <button>+</button></p>
+                <button>Confirmar</button>
                 
             </div>
         )

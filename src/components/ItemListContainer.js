@@ -12,7 +12,7 @@ const ItemListContainer = () => {
                 
             </div>
             <div class="card-footer">
-            <ItemCount stock={5} initial={1}/>
+            <ItemCount stock={0} initial={1} onAdd={true}/>
             </div>
             
         </div>
