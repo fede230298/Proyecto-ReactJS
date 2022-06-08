@@ -4,7 +4,7 @@ import React from 'react';
 // Load ReactDOM Library
 import ReactDOM from 'react-dom/client';
 //Load an existing React APP
-import App from "./components/App"
+import App from "./App"
 
 
 
