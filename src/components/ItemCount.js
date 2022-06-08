@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ItemCount = ({stock, initial, onAdd}) => {
     const [contador, setContador] = useState(initial)
+
+    useEffect(()=>{
+        console.log("Hola");
+    },[])
 
     onAdd = () =>{
         console.log(contador);
@@ -10,7 +14,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     if (stock > 0){
         const aumentarContador = () => {
             console.log("aumentar contador")
-            if (contador >= 0 && contador < stock){
+            if (contador < stock){
                 setContador(contador+1)
             }
         }
@@ -45,4 +49,4 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
 }
 
-export default ItemCount
+export default ItemCount;

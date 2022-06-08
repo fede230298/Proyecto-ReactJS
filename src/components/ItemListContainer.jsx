@@ -1,8 +1,28 @@
-import ItemCount from "./ItemCount"
+import React, { useEffect, useState } from "react"
+import customFetch from "../utils/customFetch.js"
+import productos from "../utils/productos.js"
+import ItemList from "./ItemList";
+
+
 
 const ItemListContainer = () => {
+    const [items, setItems] = useState([])
+
+    useEffect(() => {
+        customFetch(1500, productos)
+        .then(a => setItems(a))
+    }, [items])
+
     return (
-        <div class="card text-center col-3">
+        <div className="row">
+            <ItemList products={items} />
+        </div>
+    )
+}
+
+export default ItemListContainer;
+
+{/* <div class="card text-center col-3">
             <div class="card-body">
                 <h1>
                     Playstation 5 Standard
@@ -15,8 +35,4 @@ const ItemListContainer = () => {
             <ItemCount stock={5} initial={1} onAdd={true}/>
             </div>
             
-        </div>
-    )
-}
-
-export default ItemListContainer;
+        </div> */}
