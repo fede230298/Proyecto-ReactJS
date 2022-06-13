@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react"
 import customFetch from "../utils/customFetch.js"
-import productos from "../utils/productos.js"
+import producto from "../utils/producto.js"
 import ItemDetailMap from "./ItemDetailMap"
 
 const ItemDetailContainer = () => {
-    const [items, setItems] = useState([])
+    const [item, setItem] = useState([])
 
     useEffect(() => {
-        customFetch(2000, productos)
-        .then(a => setItems(a))
-    }, [items])
+        customFetch(2000, producto)
+        .then(a => setItem(a))
+    }, [item])
 
     return (
         <div className="container">
             <div className="row">
-                <ItemDetailMap products={items} />
+                <ItemDetailMap products={item} />
             </div>
         </div>
     )

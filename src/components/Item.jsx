@@ -2,7 +2,7 @@ import React from 'react'
 import ItemCount from './ItemCount'
 
 
-export const Item = ({id, name, descripcion, image, stock}) => {
+export const Item = ({id, name, image, stock}) => {
   return (
     <div className='card text-center col-3 margin-card justify-content-evenly'>
       <div className='card-body'>
