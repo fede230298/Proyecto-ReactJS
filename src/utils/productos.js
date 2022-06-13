@@ -22,7 +22,7 @@ const productos = [
         id:2,
         name:"Xbox Series S",
         precio:90000,
-        descripcion:"Consola Xbox Series S + Joystick",
+        descripcion:"Consola Xbox Series S + Joystick. Consola de videojuegos de última generación. Admite resolucion de 4K y HDR. Microsoft Xbox Series S es una consola de videojuegos de última generación, que se encuentra disponible en todos los paises del mundo.",
         image:"https://www.tradeinn.com/f/13777/137776928/microsoft-xbox-consola-xbox-series-s-512gb.jpg",
         stock: 5
     },
@@ -30,7 +30,7 @@ const productos = [
         id:3,
         name:"Nintendo Switch",
         precio:85000,
-        descripcion:"Nintendo Switch OLED + 256 GB",
+        descripcion:"Nintendo Switch OLED + 256 GB. Nintendo Switch es una consola de videojuegos de última generación, que se puede utilizar de forma portatil o en su dock para utilizarla como consola de sobre mesa",
         image:"https://improstock.com.ar/wp-content/uploads/2021/08/N2.jpg",
         stock:10,
     
