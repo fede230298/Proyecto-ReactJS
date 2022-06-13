@@ -7,7 +7,7 @@ export const Item = ({id, name, descripcion, image, stock}) => {
     <div className='card text-center col-3 margin-card justify-content-evenly'>
       <div className='card-body'>
         <h1>{name}</h1>
-        <p>{descripcion}</p>
+        {/* <p>{descripcion}</p> */}
         <img className='product-image' src={image} alt={id} />
       </div>
       <div className='card-footer'>

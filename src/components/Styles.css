@@ -9,3 +9,15 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.product-detail{
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.vertical-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

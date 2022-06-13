@@ -1,11 +1,11 @@
 import React from 'react'
-import Item from './Item'
+import ItemDetail from './ItemDetail';
 
 
 export const ItemList = ({products}) => {
   return (
     products.map(p =>
-        <Item
+        <ItemDetail
         id={p.id}
         name={p.name}
         descripcion={p.descripcion}

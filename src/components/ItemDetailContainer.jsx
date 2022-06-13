@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react"
 import customFetch from "../utils/customFetch.js"
 import productos from "../utils/productos.js"
-import ItemList from "./ItemList";
+import ItemDetailMap from "./ItemDetailMap"
 
-
-
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
     const [items, setItems] = useState([])
 
     useEffect(() => {
@@ -14,10 +12,12 @@ const ItemListContainer = () => {
     }, [items])
 
     return (
-        <div className="row">
-            <ItemList products={items} />
+        <div className="container">
+            <div className="row">
+                <ItemDetailMap products={items} />
+            </div>
         </div>
     )
 }
 
-export default ItemListContainer;
+export default ItemDetailContainer;
