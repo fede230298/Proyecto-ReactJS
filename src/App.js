@@ -1,14 +1,13 @@
 import Header from "./components/NavBar"
-import Items from "./components/ItemListContainer"
-import ItemsDetail from "./components/ItemDetailContainer"
+import Main from "./components/Main"
+import { BrowserRouter } from "react-router-dom"
 
 const App = () => {
     return (
-        <div>
+        <BrowserRouter>
             <Header/>
-            <Items/>
-            <ItemsDetail/>
-        </div>
+            <Main/>
+        </BrowserRouter>
     )
 };
 

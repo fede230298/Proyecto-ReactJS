@@ -28,19 +28,19 @@ const ItemCount = ({stock, initial, onAdd}) => {
         return(
             <div className="d-inline-block">
                 
-                <p><button onClick={disminuirContador}>-</button> Carrito: {contador} <button onClick={aumentarContador}>+</button></p>
-                <button onClick={onAdd}>Confirmar</button>
+                <p><button onClick={disminuirContador} className="btn btn-warning">-</button> Carrito: {contador} <button onClick={aumentarContador} className="btn btn-warning">+</button></p>
+                <button onClick={onAdd} className="btn btn-warning">Confirmar</button>
                 
             </div>
         )
     }
 
-    if (stock == 0){
+    if (stock === 0){
         return(
             <div className="d-inline-block">
                 
-                <p><button>-</button> Sin Stock <button>+</button></p>
-                <button>Confirmar</button>
+                <p><button className="btn btn-warning">-</button> Sin Stock <button className="btn btn-warning">+</button></p>
+                <button className="btn btn-warning">Confirmar</button>
                 
             </div>
         )

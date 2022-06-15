@@ -21,3 +21,12 @@
     align-items: center;
     justify-content: center;
 }
+
+a{
+    text-decoration: none;
+}
+
+a:active{
+    color: orange;
+    text-decoration: underline orange; 
+}

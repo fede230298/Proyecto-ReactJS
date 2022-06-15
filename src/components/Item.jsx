@@ -1,20 +1,20 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import {Link} from 'react-router-dom'
 
 
-export const Item = ({id, name, image, stock}) => {
+export const Item = ({id, name, image, precio, stock}) => {
   return (
-    <div className='card text-center col-3 margin-card justify-content-evenly'>
+    <article className='card text-center col-3 margin-card justify-content-evenly'>
       <div className='card-body'>
         <h1>{name}</h1>
-        {/* <p>{descripcion}</p> */}
         <img className='product-image' src={image} alt={id} />
       </div>
       <div className='card-footer'>
+        <p>${precio}</p>
         <p>Stock disponible {stock}</p>
-        <ItemCount stock={stock} initial={1}/>
+        <Link to={`/item/${id}`} className='btn btn-warning'>Ver detalles</Link>
       </div>
-    </div>
+    </article>
   )
 }
 
