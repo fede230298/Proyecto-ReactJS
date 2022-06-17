@@ -1,6 +1,7 @@
 import ItemDetailContainer from "./ItemDetailContainer";
 import ItemListContainer from "./ItemListContainer";
 import { Route,Routes } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Main = () => {
     return (

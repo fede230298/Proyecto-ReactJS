@@ -8,8 +8,8 @@ import App from "./App"
 
 
 
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap-icons/font/bootstrap-icons.css"
 import "./components/Styles.css"
 /* import App from './App'; */
 const root = ReactDOM.createRoot(document.getElementById('root'));

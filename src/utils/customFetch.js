@@ -1,6 +1,7 @@
 import productos from './productos.js'
 
 export const customFetch = () => {
+    
     return new Promise ((resolve) => {
         setTimeout(() => {
             resolve(productos);
