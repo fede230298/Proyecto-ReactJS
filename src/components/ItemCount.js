@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ItemCount = ({stock, initial, onAdd}) => {
     const [contador, setContador] = useState(initial)
 
-    useEffect(()=>{
-        console.log("Hola");
-    },[])
-
-    onAdd = () =>{
-        console.log(contador);
+    const confirmarContador = (e) => {
+        onAdd(contador);
     }
 
     if (stock > 0){
@@ -29,7 +25,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <div className="d-inline-block">
                 
                 <p><button onClick={disminuirContador} className="btn btn-warning">-</button> Carrito: {contador} <button onClick={aumentarContador} className="btn btn-warning">+</button></p>
-                <button onClick={onAdd} className="btn btn-warning">Confirmar</button>
+                <button onClick={confirmarContador} className="btn btn-warning">Confirmar</button>
                 
             </div>
         )
