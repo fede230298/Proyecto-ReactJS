@@ -35,7 +35,7 @@ const ItemListContainer = () => {
 
     return (
         <div className="row vertical-center">
-            {loading ? <div className="load-items"> <ReactBootstrap.Spinner animation="border" variant="primary"/> </div> : <ItemList products={items} />}
+            {loading ? <div className="load-items"> <ReactBootstrap.Spinner animation="border" variant="primary"/> </div> : <ItemList items={items} />}
         </div>
     )
 }

@@ -1,18 +1,17 @@
-import React from 'react'
 import {Link} from 'react-router-dom'
 
 
-export const Item = ({id, name, image, precio, stock}) => {
+export const Item = ({ item }) => {
   return (
     <article className='card text-center col-3 margin-card justify-content-evenly vertical-center'>
       <div className='card-body'>
-        <h1>{name}</h1>
-        <img className='product-image' src={image} alt={id} />
+        <h1>{item.name}</h1>
+        <img className='product-image' src={item.image} alt={item.id} />
       </div>
       <div className='card-footer'>
-        <p>${precio}</p>
-        <p>Stock disponible {stock}</p>
-        <Link to={`/item/${id}`} className='btn btn-warning'>Ver detalles</Link>
+        <p>${item.precio}</p>
+        <p>Stock disponible {item.stock}</p>
+        <Link to={`/item/${item.id}`} className='btn btn-warning'>Ver detalles</Link>
       </div>
     </article>
   )

@@ -1,12 +1,15 @@
 import Header from "./components/NavBar"
 import Main from "./components/Main"
 import { BrowserRouter } from "react-router-dom"
+import { CartProvider } from "./MyContext";
 
 const App = () => {
     return (
         <BrowserRouter>
-            <Header/>
-            <Main/>
+            <CartProvider>
+                <Header/>
+                <Main/>
+            </CartProvider>
         </BrowserRouter>
     )
 };

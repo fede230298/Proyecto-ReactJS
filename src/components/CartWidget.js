@@ -1,7 +1,15 @@
+import React, {useContext} from 'react';
+import {CartContext} from '../MyContext'
+import { NavLink } from 'react-router-dom';
+
 const CartWidget = () => {
+
+    const { cart, totalQuantity} = useContext(CartContext)
+
+    if(cart.length)
     return(
     <div>
-        <a class="nav-link" href="#"><i class="bi bi-cart2"></i></a>
+        <NavLink to={"/cart"}><i className="bi bi-cart2"></i> {totalQuantity()}</NavLink>
     </div>
     )
 }

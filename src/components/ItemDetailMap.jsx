@@ -2,17 +2,19 @@ import React from 'react'
 import ItemDetail from './ItemDetail';
 
 
-export const ItemList = ({products}) => {
+export const ItemList = ({item}) => {
   return (
-    products.map(p =>
+    item.map(i =>
         <ItemDetail
-        id={p.id}
+        key={i.id}
+        item={i}
+        /* id={p.id}
         name={p.name}
         descripcion={p.descripcion}
         image={p.image}
         precio={p.precio}
         key={p.id}
-        stock={p.stock}
+        stock={p.stock} */
         />
     )
   )

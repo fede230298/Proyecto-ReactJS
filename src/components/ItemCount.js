@@ -1,36 +1,29 @@
-import { useState } from "react";
+import React from "react";
 
-const ItemCount = ({stock, initial, onAdd}) => {
-    const [contador, setContador] = useState(initial)
-
-    const confirmarContador = (e) => {
-        onAdd(contador);
-    }
+const ItemCount = ({stock, contador, setContador, onAdd}) => {
 
     if (stock > 0){
-        const aumentarContador = () => {
-            console.log("aumentar contador")
+        const handlePlus = () => {
             if (contador < stock){
                 setContador(contador+1)
             }
         }
     
-        const disminuirContador = () => {
-            console.log("disminuir contador")
-            if (contador > 0){
+        const handleMinus = () => {
+            if (contador > 1){
                 setContador(contador-1)
             }
         }
+    
         return(
             <div className="d-inline-block">
-                
-                <p><button onClick={disminuirContador} className="btn btn-warning">-</button> Carrito: {contador} <button onClick={aumentarContador} className="btn btn-warning">+</button></p>
-                <button onClick={confirmarContador} className="btn btn-warning">Confirmar</button>
-                
+                    
+                <p><button onClick={handleMinus} className="btn btn-warning">-</button> Agregar: {contador} <button onClick={handlePlus} className="btn btn-warning">+</button></p>
+                <button onClick={onAdd} className="btn btn-warning">Confirmar</button>
+                    
             </div>
         )
     }
-
     if (stock === 0){
         return(
             <div className="d-inline-block">
@@ -42,7 +35,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         )
     }
 
-
 }
+
 
 export default ItemCount;

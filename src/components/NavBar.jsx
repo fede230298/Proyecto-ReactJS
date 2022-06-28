@@ -14,7 +14,7 @@ const NavBar = () => {
                             <li className="nav-item"><Link to="/category/consoles" >Consoles</Link></li>
                             <li className="nav-item"><Link to="/category/peripherals" >Peripherals</Link></li>
                             <li className="nav-item"><Link to="/category/accessories" >Accessories</Link></li>
-                            <li><Link to="/cart"><CartWidget/></Link></li>
+                            <li><CartWidget/></li>
                         </ul>
                     </div>
                 </div>
