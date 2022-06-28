@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {CartContext} from '../MyContext'
+import {CartContext} from '../CartContext'
 import { NavLink } from 'react-router-dom';
 
 const CartWidget = () => {

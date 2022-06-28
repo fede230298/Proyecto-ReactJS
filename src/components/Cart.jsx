@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { CartContext } from "../MyContext";
+import { CartContext } from "../CartContext";
 
 const Cart = () => {
 
@@ -25,8 +25,8 @@ const Cart = () => {
                     <div key={item.id}>
                         <h4>{item.name}</h4>
                         <img src={item.image} alt={item.name} />
-                        <p>Cantidad: {item.amount}</p>
-                        <h6>Precio: ${item.price * item.amount}</h6>
+                        <p>Cantidad: {item.cantidad}</p>
+                        <h6>Precio: ${item.precio * item.cantidad}</h6>
                         <button onClick={() => removeItem(item.id)} className="btn btn-danger">Borrar</button>
                     </div>
                 ))

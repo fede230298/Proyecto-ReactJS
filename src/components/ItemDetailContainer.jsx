@@ -6,7 +6,7 @@ import * as ReactBootstrap from 'react-bootstrap';
 
 const ItemDetailContainer = () => {
 
-    const [item, setItem] = useState()
+    const [item, setItem] = useState([])
 
     const [loading, setLoading] = useState(false);
 
