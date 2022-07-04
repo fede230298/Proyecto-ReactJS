@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
-import {getProductById} from "../utils/customFetch.js"
 import { useParams } from "react-router-dom"
 import {ItemDetail} from "./ItemDetail"
-import * as ReactBootstrap from 'react-bootstrap';
+import * as ReactBootstrap from 'react-bootstrap'
+import { db } from '../firebase'
+import {doc, getDoc} from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
 
@@ -14,11 +15,14 @@ const ItemDetailContainer = () => {
     
     useEffect(() => {
         setLoading(true)
-        getProductById(parseInt(id))
-        .then (response => {
-            setItem(response)
-            setLoading(false)
-        })
+        const docRef = doc(db, "productos", id)
+        getDoc(docRef)
+            .then((res) => {
+                setItem({id: docRef.id, ...res.data()})
+            })
+            .finally(() => {
+                setLoading(false)
+            })
     }, [])
 
     return (
