@@ -36,22 +36,9 @@ const Cart = () => {
 
             <button onClick={emptyCart} className="btn btn-danger">Vaciar carrito</button>
 
-            <Link to="/checkout">Finalizar la compra</Link>
+            <Link to="/checkout" className="btn btn-success">Ir al Checkout</Link>
         </div>
     )
 }
 
 export default Cart;
-
-/*<form onSubmit={handleSubmit}>
-<div>
-<input onChange={handleNameChange} type="text" id="name" placeholder="Name..." value={user.name} />
-</div>
-<div>
-<input onChange={handleEmailChange} type="text" id="email" placeholder="Email..." value={user.email} />
-</div>
-<div>
-<input onChange={handleTelChange} type="text" id="tel" placeholder="Telephone..." value={user.tel} />
-</div>
-<button onClick={handleClick}>Comprar</button>
-</form>*/

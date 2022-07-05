@@ -18,8 +18,8 @@ const ItemListContainer = () => {
 
         const collectionProductos = collection(db, "productos")
 
-        const q = category ? query(collectionProductos, where("category", "==", category)) : collectionProductos
-        getDocs(q)
+        const consulta = category ? query(collectionProductos, where("category", "==", category)) : collectionProductos
+        getDocs(consulta)
             .then((result) => {
                 const productosArray = result.docs.map(ref => {
                     return {
