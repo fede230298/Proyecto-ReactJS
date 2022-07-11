@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import {ItemDetail} from "./ItemDetail"
-import * as ReactBootstrap from 'react-bootstrap'
 import { db } from '../firebase'
 import {doc, getDoc} from 'firebase/firestore'
+import {Loader} from '../utils/Loader'
 
 const ItemDetailContainer = () => {
 
@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
     return (
         <div className="container">
             <div className="row">
-                { loading ?  <div className="load-items"> <ReactBootstrap.Spinner animation="border" variant="primary" /> </div> : <ItemDetail item={item} />}
+                { loading ?  <Loader /> : <ItemDetail item={item} />}
             </div>
         </div>
     )

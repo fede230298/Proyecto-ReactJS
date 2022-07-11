@@ -12,6 +12,7 @@ const Checkout = () => {
         nombre: '',
         telefono: '',
         email: '',
+        checkEmail: '',
         direccion: ''
     })
 
@@ -39,11 +40,20 @@ const Checkout = () => {
         if (values.telefono.length < 5){
             setErrorCheck({
                 telefono: "El número de contacto es inválido"})
+            return
         }
 
         if (values.email.length < 5){
             setErrorCheck({
                 email: "El email es inválido"})
+            
+        }
+
+        if (values.email != values.checkEmail){
+            setErrorCheck({
+                checkEmail: "Las direcciones de email no coinciden"
+            })
+            return
         }
 
         if (values.direccion.length < 5) {
@@ -107,20 +117,74 @@ const Checkout = () => {
 
         return (
             <div>
-                <h2>CheckOut</h2>
+                <h2 className="vertical-center">Checkout</h2>
                 <hr />
 
-                <form onSubmit={handleSubmit}>
-                    <input type="text" value={values.nombre} name="nombre" onChange={handleInputChange} placeholder="Nombre" />
-                    {errorCheck.nombre && <p>{errorCheck.nombre}</p>}
-                    <input type="tel" value={values.telefono} name="telefono" onChange={handleInputChange} placeholder="Teléfono" />
-                    {errorCheck.telefono && <p>{errorCheck.telefono}</p>}
-                    <input type="text" value={values.direccion} name="direccion" onChange={handleInputChange} placeholder="Direccion" />
-                    {errorCheck.direccion && <p>{errorCheck.direccion}</p>}
-                    <input type="text" value={values.email} name="email" onChange={handleInputChange} placeholder="Email" />
-                    <button type="submit" className="btn btn-warning">Enviar</button>
-                </form>
-                <button onClick={emptyCart} className="btn btn-danger">Cancelar compra</button>
+                <div className="container cart-row col-12">
+                    <h3 className="col-12 vertical-center">Por favor, ingrese los siguientes datos para finalizar la compra:</h3>
+
+                    <form onSubmit={handleSubmit}>
+                        <div className="row align-items-center">
+                            <div className="col-2">
+                                <label htmlFor="nombre" className="col-form-laber">Nombre:</label>
+                            </div>
+                            <div className="col-auto">
+                                <input type="text" value={values.nombre} name="nombre" onChange={handleInputChange} placeholder="Nombre" required/>
+                            </div>
+                            <div className="col-auto">
+                                {errorCheck.nombre && <p className="form-text">{errorCheck.nombre}</p>}
+                            </div>
+                        </div>
+                        <div className="row align-items-center">
+                            <div className="col-2">
+                                <label htmlFor="telefono" className="col-form-laber">Télefono:</label>
+                            </div>
+                            <div className="col-auto">
+                                <input type="tel" value={values.telefono} name="telefono" onChange={handleInputChange} placeholder="Teléfono" required/>
+                            </div>
+                            <div className="col-auto">
+                                {errorCheck.telefono && <p className="form-text">{errorCheck.telefono}</p>}
+                            </div>
+                        </div>
+                        <div className="row align-items-center">
+                            <div className="col-2">
+                                <label htmlFor="direccion" className="col-form-laber">Dirección:</label>
+                            </div>
+                            <div className="col-auto">
+                                <input type="text" value={values.direccion} name="direccion" onChange={handleInputChange} placeholder="Direccion" required/>
+                            </div>
+                            <div className="col-auto">
+                                {errorCheck.direccion && <p className="form-text">{errorCheck.direccion}</p>}
+                            </div>
+                        </div>
+                        <div className="row align-items-center">
+                            <div className="col-2">
+                                <label htmlFor="direccion" className="col-form-laber">Email:</label>
+                            </div>
+                            <div className="col-auto">
+                                <input type="text" value={values.email} name="email" onChange={handleInputChange} placeholder="Email" required/>
+                            </div>
+                            <div className="col-auto">
+                                {errorCheck.email && <p className="form-text">{errorCheck.email}</p>}
+                            </div>
+                        </div>
+                        <div className="row align-items-center">
+                            <div className="col-2">
+                                <label htmlFor="direccion" className="col-form-laber">Repita email:</label>
+                            </div>
+                            <div className="col-auto">
+                                <input type="text" value={values.checkEmail} name="checkEmail" onChange={handleInputChange} placeholder="Repita email" required/>
+                            </div>
+                            <div className="col-auto">
+                                {errorCheck.checkEmail && <p className="form-text">{errorCheck.checkEmail}</p>}
+                            </div>
+                        </div>
+                        <button type="submit" className="btn btn-success">Enviar</button>
+                    </form>
+                </div>
+                <div className="vertical-center">
+                    <button onClick={emptyCart} className="btn btn-danger">Cancelar compra</button>
+                </div>
             </div>
         )
     }

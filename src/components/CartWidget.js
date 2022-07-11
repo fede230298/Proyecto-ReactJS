@@ -6,7 +6,6 @@ const CartWidget = () => {
 
     const { cart, totalQuantity} = useContext(CartContext)
 
-    if(cart.length)
     return(
     <div>
         <NavLink to={"/cart"}><i className="bi bi-cart2"></i> {totalQuantity()}</NavLink>

@@ -10,33 +10,40 @@ const Cart = () => {
     if (cart.length === 0){
         return (
             <div>
-                <h3>Tu carrito está vacío</h3>
-                <Link to={"/"} className="btn btn-warning">Volver al inicio</Link>
+                <div className="vertical-center">
+                    <h3>Tu carrito está vacío</h3>
+                </div>
+                <div className="vertical-center">
+                    <Link to={"/"} className="btn btn-warning">Volver al inicio</Link>
+                </div>
             </div>
         )
     }
 
     return (
-        <div className="vertical-center">
-            <h1>Tu Carrito:</h1>
+        <div className="">
+            <h1 className="vertical-center">Tu Carrito:</h1>
             <br />
-            {
-                cart.map((item) => (
-                    <div key={item.id}>
-                        <h4>{item.name}</h4>
-                        <img src={item.image} alt={item.name} />
-                        <p>Cantidad: {item.cantidad}</p>
-                        <h6>Precio: ${item.precio * item.cantidad}</h6>
-                        <button onClick={() => removeItem(item.id)} className="btn btn-danger">Borrar</button>
-                    </div>
-                ))
-            }
-            
-            <h4>Total: ${totalPrice()}</h4>
+            <div className="container">
+                {
+                    cart.map((item) => (
+                        <div key={item.id} className="row cart-row col-12">
+                            <img src={item.image} alt={item.name} className="col-3 cart-image vertical-center"/>
+                            <h4 className="col-3 vertical-center">{item.name}</h4>
+                            <p className="col-3 vertical-center">Cantidad: {item.cantidad}</p>
+                            <h6 className="col-3 vertical-center">Precio: ${item.precio * item.cantidad}</h6>
+                            <button onClick={() => removeItem(item.id)} className="btn btn-danger col cart-btn">Borrar</button>
+                        </div>
+                    ))
+                }
+            </div>
+            <div className="container">
+                <h4>Total: ${totalPrice()}</h4>
 
-            <button onClick={emptyCart} className="btn btn-danger">Vaciar carrito</button>
+                <button onClick={emptyCart} className="btn btn-danger">Vaciar carrito</button>
 
-            <Link to="/checkout" className="btn btn-success">Ir al Checkout</Link>
+                <Link to="/checkout" className="btn btn-success">Ir al Checkout</Link>
+            </div>
         </div>
     )
 }

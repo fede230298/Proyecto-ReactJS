@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import * as ReactBootstrap from 'react-bootstrap';
 import { db } from '../firebase'
 import { getDocs, query, where, collection } from "firebase/firestore";
+import { Loader } from '../utils/Loader';
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
@@ -41,7 +41,7 @@ const ItemListContainer = () => {
 
     return (
         <div className="row vertical-center">
-            {loading ? <div className="load-items"> <ReactBootstrap.Spinner animation="border" variant="primary"/> </div> : <ItemList items={items} />}
+            {loading ? <Loader /> : <ItemList items={items} />}
         </div>
     )
 }
