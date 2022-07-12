@@ -1,7 +1,7 @@
 import Header from "./components/NavBar"
-import Main from "./components/Main"
+import Main from "./routes/Main"
 import { BrowserRouter } from "react-router-dom"
-import { CartProvider } from "./CartContext";
+import { CartProvider } from "./context/CartContext";
 
 const App = () => {
     return (

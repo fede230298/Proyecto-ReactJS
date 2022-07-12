@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+!# CompuWorld Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CompuWorld Store es una startup de elementos tecnoclógicos, desde componentes de PC, hasta consolas y sus accesorios. Es una pequeña tienda que que busca expandirse y brindar un buen servicio y calidez a los clientes.
 
-## Available Scripts
+El proyecto está enfocado en una interfaz sencilla, de rápido manejo e intuitiva para el usuario. Cada producto está separado por categoría para poder encontrar más rápido lo que se busca. Se devuelve el detalle de cada producto, se puede elegir la cantidad de cada producto que desee, siempre y cuando haya stock, y si no hay stock se lo indicará por pantalla. Al finalizar la compra se le mostrará el carrito con su compra, los items que va a comprar y el precio total e individual de cada producto. Se puede vaciar el carrito si no le gusta la compra o eliminar un item en particular. Luego se procede al checkout, donde se le solicitará al cliente ingresar nombre, telefono, direccion, email y la confirmación de email para asegurarnos de que el medio de contacto sea el correcto. A su vez, si no se desea realizar la compra en este paso, existe el botón para cancelar la orden. Por ultimo, se le devuelve al cliente el ID de la compra realizada.
 
-In the project directory, you can run:
 
-### `npm start`
+#2 Navegacion por la web
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Navegacion Web]()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#2 Librerías utilizadas
 
-### `npm test`
+[*Bootstrap*](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La librería Bootstrap de CSS, es un gran complemento para poder realizar la interfaz visual de la web, ya que tiene muchas clases generadas para poder personalizar a gusto el diseño.
 
-### `npm run build`
+[*Bootstrap-icons*](https://icons.getbootstrap.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La librería de iconos de Bootstrap sirvió para poder tomar el icono del carrito para poder añadirlo al navbar y no colocar una imagen solamente, para poder ponerle el color y editarla a gusto.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[*React-Bootstrap*](https://react-bootstrap.github.io/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+La librería de React-bootstrap fue utilizada para poder realizar el efecto de carga de la web cada vez que se pasa de un sitio a otro.

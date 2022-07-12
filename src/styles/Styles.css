@@ -49,11 +49,56 @@
     justify-content: center;
 }
 
-a{
+li > a{
     text-decoration: none;
+    color: orange;
+}
+
+i{
+    text-decoration: none;
+    color: orange;
+}
+
+i:hover{
+    color: rgb(145, 94, 1);
 }
 
 a:active{
-    color: orange;
-    text-decoration: underline orange; 
+    color: orange !important;
+    color: rgb(145, 94, 1);
 }
+
+a:hover{
+    color: rgb(145, 94, 1);
+}
+
+nav > div > a /* .brand-title */{
+    font-size: 2rem;
+    color: orange !important;
+}
+
+.text-orange{
+    color: orange;
+    text-decoration: none !important;
+}
+
+.brand-title{
+    color: orange !important;
+    font-size: 3rem;
+}
+
+a > h1 {
+    color: orange !important;
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

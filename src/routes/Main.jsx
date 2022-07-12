@@ -1,9 +1,9 @@
-import ItemDetailContainer from "./ItemDetailContainer";
-import ItemListContainer from "./ItemListContainer";
+import ItemDetailContainer from "../components/ItemDetailContainer";
+import ItemListContainer from "../components/ItemListContainer";
 import { Route,Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Cart from "./Cart";
-import Checkout from "./Checkout"
+import Cart from "../components/Cart";
+import Checkout from "../components/Checkout"
 
 const Main = () => {
     return (

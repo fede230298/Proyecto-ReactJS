@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react"
 import { Navigate } from "react-router-dom"
-import { CartContext } from "../CartContext"
-import { db } from "../firebase"
+import { CartContext } from "../context/CartContext"
+import { db } from "../firebase/firebase"
 import { collection, getDocs, addDoc, writeBatch, query, where, documentId } from "firebase/firestore"
 
 const Checkout = () => {
@@ -62,9 +62,13 @@ const Checkout = () => {
             return
         }
 
+        const timestamp = Date.now();
+        const fecha = new Date(timestamp)
+
         const orden = {
             client: values,
             items: cart.map(({id, cantidad, name, precio}) => ({id, cantidad, name, precio})),
+            time: fecha,
             total: totalPrice()
         }
 
@@ -104,9 +108,9 @@ const Checkout = () => {
         if (orderID){
             return (
                 <div>
-                    <h1>Gracias por su compra!</h1>
-                    <img src="https://anpimarcos.com/wp-content/uploads/2020/08/gracias.png" alt="Gracias por su compra" />
-                    <h4>Su orden de compra es: {orderID}</h4>
+                    <h1 className="vertical-center">Gracias por su compra!</h1>
+                    <img src="https://anpimarcos.com/wp-content/uploads/2020/08/gracias.png" alt="Gracias por su compra" className="center"/>
+                    <h4 className="vertical-center">Su orden de compra es: {orderID}</h4>
                 </div>
             )
         }
