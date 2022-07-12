@@ -1,15 +1,15 @@
-!# CompuWorld Store
+# CompuWorld Store
 
 CompuWorld Store es una startup de elementos tecnoclógicos, desde componentes de PC, hasta consolas y sus accesorios. Es una pequeña tienda que que busca expandirse y brindar un buen servicio y calidez a los clientes.
 
 El proyecto está enfocado en una interfaz sencilla, de rápido manejo e intuitiva para el usuario. Cada producto está separado por categoría para poder encontrar más rápido lo que se busca. Se devuelve el detalle de cada producto, se puede elegir la cantidad de cada producto que desee, siempre y cuando haya stock, y si no hay stock se lo indicará por pantalla. Al finalizar la compra se le mostrará el carrito con su compra, los items que va a comprar y el precio total e individual de cada producto. Se puede vaciar el carrito si no le gusta la compra o eliminar un item en particular. Luego se procede al checkout, donde se le solicitará al cliente ingresar nombre, telefono, direccion, email y la confirmación de email para asegurarnos de que el medio de contacto sea el correcto. A su vez, si no se desea realizar la compra en este paso, existe el botón para cancelar la orden. Por ultimo, se le devuelve al cliente el ID de la compra realizada.
 
 
-#2 Navegacion por la web
+## Navegacion por la web
 
-![Navegacion Web]()
+![Navegacion Web](https://raw.githubusercontent.com/fede230298/Proyecto-ReactJS/master/Navegaci%C3%B3n_completa.gif)
 
-#2 Librerías utilizadas
+### Librerías utilizadas
 
 [*Bootstrap*](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 
